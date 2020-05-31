@@ -1,0 +1,25 @@
+{
+  "name": "tax-calculation-api",
+  "version": "1.0.0",
+  "description": "personal income tax calculation",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chaptone/tax-calculation-api.git"
+  },
+  "author": "chaptone",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chaptone/tax-calculation-api/issues"
+  },
+  "homepage": "https://github.com/chaptone/tax-calculation-api#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4",
+    "numeral": "^2.0.6"
+  }
+}

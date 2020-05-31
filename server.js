@@ -1,4 +1,6 @@
 const express = require('express')
+const { calculateTax } = require('./tax');
+
 const app = express()
 const port = 8080
 
@@ -8,12 +10,15 @@ app.get('/tax', (req, res) => {
     if (!req.query || !req.query.netIncome) {
         throw new Error('netIncome is required')
     }
-    const { netIncome = 0 } = req.query.netIncome
+
+    const { netIncome } = req.query
+    const tax = calculateTax(netIncome)
+    console.log("tax", tax)
 
     res.json({
         status: 200,
         result: {
-            tax: 200
+            tax
         }
     })
 })
